@@ -1,28 +1,24 @@
 public class Main {
-    public static void main(String[] args) {
-        Book noapteBuna = new Book("Noapte buna, copii!");
-        Author rpGheo = new Author("Radu Pavel Gheo");
-        noapteBuna.addAuthor(rpGheo);
+    public static void main(String[] args) throws Exception {
+        SubChapter cap1 = new SubChapter("Capitolul 1");
 
-        Chapter cap1 = new Chapter("Capitolul 1");
-        Chapter cap11 = new Chapter("Capitolul 1.1");
-        Chapter cap111 = new Chapter("Capitolul 1.1.1");
-        Chapter cap1111 = new Chapter("Subcapitol 1.1.1.1");
+        Paragraph p1 = new Paragraph("Paragraph 1", new AlignCenter());
+        cap1.add(p1);
 
-        noapteBuna.addContent(new Paragraph("Multumesc color care ..."));
-        noapteBuna.addContent(cap1);
+        Paragraph p2 = new Paragraph("Paragraph 2", new AlignLeft());
+        cap1.add(p2);
 
-        cap1.add(new Paragraph("Moto capitol"));
-        cap1.add(cap11);
+        Paragraph p3 = new Paragraph("Paragraph 3", new AlignRight());
+        cap1.add(p3);
 
-        cap11.add(new Paragraph("Text subcap 1.1"));
-        cap11.add(cap111);
+        Paragraph p4 = new Paragraph("Paragraph 4", new AlignCenter());
+        cap1.add(p4);
 
-        cap111.add(new Paragraph("Text subcap 1.1.1"));
-        cap111.add(cap1111);
 
-        cap1111.add(new Image("Img subcap 1.1.1.1"));
+        p1.setAlignStrategy(new AlignCenter());
+        p2.setAlignStrategy(new AlignRight());
+        p3.setAlignStrategy(new AlignLeft());
 
-        noapteBuna.print();
+        cap1.print();
     }
 }
