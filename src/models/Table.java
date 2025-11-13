@@ -1,3 +1,7 @@
+package models;
+
+import models.Element;
+
 class Table extends Element {
     private String title;
 

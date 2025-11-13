@@ -1,7 +1,9 @@
+package models;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class Book {
+public class Book {
     private String title;
     private List<Author> authors;
     private List<Chapter> chapters;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="book" class="models.Book">
+        <constructor-arg value="Design Patterns Book" />
+    </bean>
+
+    <bean id="author" class="models.Author">
+        <constructor-arg value="Foghis Adrian" />
+    </bean>
+</beans>

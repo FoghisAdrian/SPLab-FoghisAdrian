@@ -1,7 +1,9 @@
+package models;
+
 import java.util.ArrayList;
 import java.util.List;
 
-class SubChapter {
+public class SubChapter {
     private String name;
     private List<Element> elements;
 

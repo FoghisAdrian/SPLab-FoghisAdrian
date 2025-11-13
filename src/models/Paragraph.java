@@ -1,12 +1,20 @@
+package models;
 
-import java.util.ArrayList;
-import java.util.List;
-class Paragraph extends Element {
+import alignings.AlignLeft;
+import models.Element;
+import alignings.AlignStrategy;
+
+public class Paragraph extends Element {
     private String text;
     private AlignStrategy alignStrategy;
 
     public Paragraph(String text, AlignStrategy alignStrategy) {
         this.text = text; this.alignStrategy = alignStrategy;
+    }
+
+    public Paragraph(String text)
+    {
+        this.text = text;
     }
 
     public String getText() {
