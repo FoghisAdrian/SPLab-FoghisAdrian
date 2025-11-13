@@ -13,7 +13,6 @@ public class Context {
 
     public Context(String xmlFile) {
         try {
-            // Load from classpath instead of file system
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream(xmlFile);
 
             if (inputStream == null) {
